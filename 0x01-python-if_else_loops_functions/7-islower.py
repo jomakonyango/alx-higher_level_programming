@@ -1,3 +1,4 @@
 #!/usr/bin/python3
-ef islower(c):
-    return ord('a') <= ord(c) <= ord('z')
+def islower(c):
+    """Checks if a character is lowercase"""
+    return True if 'a' <= c <= 'z' else False
