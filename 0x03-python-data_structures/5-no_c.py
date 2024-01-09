@@ -9,4 +9,4 @@ def no_c(my_string):
     Returns:
     The modified string
     """
-    return "".join(char for char in my_string if char not in 'cC')
+    return "".join([char for char in my_string if char not in 'cC'])
