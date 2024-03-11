@@ -101,21 +101,18 @@ class Rectangle:
 
     def __str__(self):
         """
-        Returns a string representation of the rectangle using
-        the character(s) stored in print_symbol
+        Returns a string representation of the rectangle using the character(s) stored in print_symbol
 
         Returns:
         str: string representation of the rectangle
         """
         if self.__width == 0 or self.__height == 0:
             return ""
-        return '\n'
-    .join([str(self.print_symbol) * self.__width for _ in range(self.__height)])
+        return '\n'.join([str(self.print_symbol) * self.__width for _ in range(self.__height)])
 
     def __repr__(self):
         """
-        Returns a string representation of the rectangle
-        that can be used with eval
+        Returns a string representation of the rectangle that can be used with eval
 
         Returns:
         str: string representation of the rectangle that can be used with eval
@@ -139,8 +136,7 @@ class Rectangle:
         rect_2 (Rectangle): second rectangle object
 
         Returns:
-        Rectangle: biggest rectangle, or rect_1 if both
-        have the same area value
+        Rectangle: biggest rectangle, or rect_1 if both have the same area value
 
         Raises:
         TypeError: if rect_1 is not an instance of Rectangle
