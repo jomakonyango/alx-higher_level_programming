@@ -2,7 +2,6 @@
 """Module for Rectangle class."""
 from models.base import Base
 
-
 class Rectangle(Base):
     """Rectangle class that inherits from Base."""
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -74,7 +73,10 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
-        """Method that prints in stdout the 
-        Rectangle instance with the character #."""
+        """Method that prints in stdout the Rectangle instance with the character #."""
         for i in range(self.__height):
             print("#" * self.__width)
+
+    def __str__(self):
+        """Method that returns the string representation of the Rectangle instance."""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
