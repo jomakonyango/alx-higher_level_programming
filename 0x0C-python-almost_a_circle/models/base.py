@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Module for Base class."""
 import json
+import os
 
 class Base:
     """Base class."""
@@ -30,3 +31,9 @@ class Base:
         with open(cls.__name__ + ".json", "w") as file:
             file.write(cls.to_json_string(list_dicts))
 
+    @staticmethod
+    def from_json_string(json_string):
+        """Returns the list of the JSON string representation json_string."""
+        if json_string is None or json_string == "":
+            return []
+        return json.loads(json_string)
