@@ -27,7 +27,7 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """Method that assigns an argument to each attribute."""
-        attributes = ["id", "width", "height", "x", "y"]
+        attributes = ["id", "size", "x", "y"]
         if args and len(args) > 0:
             for i, arg in enumerate(args):
                 setattr(self, attributes[i], arg)
