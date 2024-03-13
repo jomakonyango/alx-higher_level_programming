@@ -74,13 +74,15 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
-        """Method that prints in stdout the Rectangle instance with the character #."""
+        """Method that prints in stdout the Rectangle
+        instance with the character #."""
         print("\n" * self.__y, end="")
         for i in range(self.__height):
             print(" " * self.__x + "#" * self.__width)
 
     def __str__(self):
-        """Method that returns the string representation of the Rectangle instance."""
+        """Method that returns the string representation
+        of the Rectangle instance."""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
 
     def update(self, *args, **kwargs):
@@ -93,3 +95,8 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 if key in attributes:
                     setattr(self, key, value)
+
+    def to_dictionary(self):
+        """Method that returns the dictionary
+        representation of a Rectangle."""
+        return {"id": self.id, "width": self.width, "height": self.height, "x": self.x, "y": self.y}
