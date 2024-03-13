@@ -10,6 +10,5 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
-        """Method that returns the string
-        representation of the Square instance."""
-return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width)
+        """Method that returns the string representation of the Square instance."""
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width)
