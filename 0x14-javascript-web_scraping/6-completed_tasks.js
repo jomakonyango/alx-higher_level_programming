@@ -9,8 +9,7 @@ request(url, function (error, response, body) {
     const tasks = JSON.parse(body);
     const completedTasks = {};
 
-    for (let i = 0; i < tasks.length; i++) {
-      const task = tasks[i];
+    for (const task of tasks) {
       if (task.completed) {
         if (completedTasks[task.userId]) {
           completedTasks[task.userId]++;
