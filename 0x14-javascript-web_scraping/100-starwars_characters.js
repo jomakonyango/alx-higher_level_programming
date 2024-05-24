@@ -14,7 +14,7 @@ request(url, function (error, response, body) {
   }
 });
 
-function printCharacters(characterUrls, i) {
+function printCharacters (characterUrls, i) {
   if (i >= characterUrls.length) {
     return;
   }
